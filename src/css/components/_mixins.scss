@@ -1,0 +1,26 @@
+@import "./variables";
+
+@mixin flexbox($align, $justify, $direction, $gap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    gap: $gap;
+}
+@mixin reset {
+    a {
+        color: $blue;
+        text-decoration: none;
+        &:hover, &:after {
+            color: $blueActive;
+            transition: 350ms ease-in-out;
+        }
+    }
+    li {
+        list-style: none;
+    }
+    button {
+        border: 0;
+        outline: none;
+    }
+}

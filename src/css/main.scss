@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 @import "./components/variables";
 @import "./components/mixins";
 @import "./components/layout/header";
@@ -14,24 +17,31 @@
     box-sizing: border-box;
 }
 
+@include reset;
+
 body {
     font-size: 1rem;
     color: $black;
-}
-
-button {
-    background: $blue;
-    color: $white;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    padding: .5rem 1rem;
-    &:hover, &:active, &:focus {
-        background: $blueActive
+    font-family: $primaryFont;
+    button {
+        background: $blue;
+        color: $white;
+        cursor: pointer;
+        padding: .5rem 1rem;
+        &:hover, &:active, &:focus {
+            background: $blueActive
+        }
     }
-}
-
-a {
-    text-decoration: none;
-    color: $black;
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+    h1 { font-size: clamp(2.5rem, 6vw, 10rem); font-family: $secondaryFont; }
+    h2 { font-size: clamp(1.75rem, 3vw, 5rem); font-family: $secondaryFont; }
+    h3 { font-size: clamp(1.5rem, 2vw, 3rem); }
+    p {
+        font-size: clamp(1rem, 1.25vw, 1.5rem);
+        font-weight: 500;
+        line-height: 1.85;
+    }
 }
