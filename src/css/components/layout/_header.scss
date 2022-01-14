@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    @include flexbox(none, none, column, 0);
+    @include flexbox(0, 0, column, 0);
     .main-nav {
         width: 100%;
         padding: 1rem;
@@ -26,6 +26,7 @@ header {
         width: 100vw;
         background: rgba(15, 15, 15, 0.95);
         display: none;
+        animation: fade 250ms ease;
         svg {
             position: absolute;
             top: 2rem;
