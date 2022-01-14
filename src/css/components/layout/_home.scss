@@ -4,12 +4,16 @@ main {
     .content-container-left {
         width: 100%;
         padding: 1rem;
-        @include flexbox(none, none, column, 2rem);
+        @include flexbox(0, 0, column, 2rem);
+        .icons {
+            @include flexbox(center, 0, row, 2.5rem);
+        }
         .text-container {
-            @include flexbox(none, none, column, 2rem);
+            @include flexbox(0, 0, column, 2rem);
             p { color: $gray; }
             .card {
-                @include flexbox(none, none, column, 2rem); 
+                @include flexbox(0, 0, column, 2rem);
+                button { align-self: flex-start; } 
             }
         }
     }
