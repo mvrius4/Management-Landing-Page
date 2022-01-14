@@ -1,21 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 header {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0;
 }
 
 header .main-nav {
@@ -34,7 +27,6 @@ header .main-nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 0;
 }
 
 header .main-nav .logo {
@@ -62,6 +54,8 @@ header nav {
   width: 100vw;
   background: rgba(15, 15, 15, 0.95);
   display: none;
+  -webkit-animation: fade 250ms ease;
+          animation: fade 250ms ease;
 }
 
 header nav svg {
@@ -87,7 +81,6 @@ header nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0;
 }
 
 header nav ul li a {
@@ -118,12 +111,6 @@ main .content-container-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -131,16 +118,24 @@ main .content-container-left {
   gap: 2rem;
 }
 
+main .content-container-left .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2.5rem;
+}
+
 main .content-container-left .text-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -156,12 +151,28 @@ main .content-container-left .text-container .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+main .content-container-left .text-container .card button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.info {
+  width: 80%;
+  padding: 8rem 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -200,21 +211,45 @@ body {
   font-size: 1rem;
   color: #141414;
   font-family: "Roboto", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body button {
   background: #1455d4;
   color: #e6e6e6;
   cursor: pointer;
-  padding: .5rem 1rem;
+  font-size: clamp(1rem, 1.3vw, 1.6rem);
+  font-weight: 700;
+  padding: .85rem 1.5rem;
 }
 
 body button:hover, body button:active, body button:focus {
   background: #134ec4;
 }
 
+body section {
+  padding: 5rem 1rem;
+}
+
+body section, body main {
+  width: 100%;
+}
+
 body svg {
   fill: #141414;
+  cursor: pointer;
 }
 
 body svg:hover, body svg:active {
@@ -233,19 +268,23 @@ body a {
 body h1 {
   font-size: clamp(2.5rem, 6vw, 10rem);
   font-family: "Playfair Display", serif;
+  font-weight: 700;
 }
 
 body h2 {
-  font-size: clamp(1.75rem, 3vw, 5rem);
+  font-size: clamp(2rem, 4vw, 8rem);
   font-family: "Playfair Display", serif;
+  font-weight: 700;
 }
 
 body h3 {
-  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-size: clamp(1.4rem, 2.5vw, 5rem);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 body p {
-  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  font-size: clamp(1.15rem, 1.65vw, 2.15rem);
   font-weight: 400;
   line-height: 1.5;
 }
@@ -253,5 +292,23 @@ body p {
 body span {
   font-size: clamp(0.75rem, 1vw, 1.5rem);
   color: #969696;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */
