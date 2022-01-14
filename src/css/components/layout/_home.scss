@@ -1,0 +1,16 @@
+main {
+    width: 100%;
+    @include flexbox(center, center, column, 2rem);
+    .content-container-left {
+        width: 100%;
+        padding: 1rem;
+        @include flexbox(none, none, column, 2rem);
+        .text-container {
+            @include flexbox(none, none, column, 2rem);
+            p { color: $gray; }
+            .card {
+                @include flexbox(none, none, column, 2rem); 
+            }
+        }
+    }
+}
