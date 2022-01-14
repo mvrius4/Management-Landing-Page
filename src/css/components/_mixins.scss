@@ -2,11 +2,12 @@
 
 @mixin flexbox($align, $justify, $direction, $gap) {
     display: flex;
-    align-items: $align;
-    justify-content: $justify;
-    flex-direction: $direction;
-    gap: $gap;
+    @if $align != 0 { align-items: $align; }
+    @if $justify != 0 { justify-content: $justify; }
+    @if $direction != 0 { flex-direction: $direction; }
+    @if $gap != 0 { gap: $gap; }
 }
+
 @mixin reset {
     a {
         color: $blue;
