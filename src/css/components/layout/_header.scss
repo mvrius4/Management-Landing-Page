@@ -1,18 +1,41 @@
 header {
     width: 100%;
-    padding: 2rem;
-    @include flexbox(none, none, column, 1rem);
+    @include flexbox(none, none, column, 0);
     .main-nav {
         width: 100%;
-        @include flexbox(center, space-between, row, 1rem);
+        padding: 1rem;
+        @include flexbox(center, space-between, row, 0);
+        .logo {
+            font-size: clamp(1.5rem, 2vw, 3rem);
+            font-weight: 500;
+        }
+        svg {
+            cursor: pointer;
+        }
     }
     .active {
         display: block;
     }
     nav {
-        background: rgba(15, 15, 15, 0.75);
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: max-content;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(15, 15, 15, 0.95);
         display: none;
+        svg {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            fill: $white;
+            cursor: pointer;
+        }
         ul {
+            height: 100vh;
+            @include flexbox(center, space-evenly, column, 0);
             li {
                 a { color: $white; }
             }
