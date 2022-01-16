@@ -3,7 +3,7 @@ main {
     @include flexbox(center, center, column, 2rem);
     .content-container-left {
         width: 100%;
-        padding: 1rem;
+        padding: 1.5rem;
         @include flexbox(0, 0, column, 2rem);
         .icons {
             @include flexbox(center, 0, row, 2.5rem);
