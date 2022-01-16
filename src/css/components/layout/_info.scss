@@ -2,5 +2,6 @@
     width: 80%;
     padding: 8rem 1rem;
     text-align: center;
+    line-height: 1.5;
     @include flexbox(center, 0, column, 2rem);
 }
