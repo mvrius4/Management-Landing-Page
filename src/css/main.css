@@ -107,7 +107,7 @@ main {
 
 main .content-container-left {
   width: 100%;
-  padding: 1rem;
+  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,7 +144,7 @@ main .content-container-left .text-container {
 }
 
 main .content-container-left .text-container p {
-  color: #787878;
+  color: #828282;
 }
 
 main .content-container-left .text-container .card {
@@ -167,6 +167,7 @@ main .content-container-left .text-container .card button {
   width: 80%;
   padding: 8rem 1rem;
   text-align: center;
+  line-height: 1.5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,6 +179,79 @@ main .content-container-left .text-container .card button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
+}
+
+.services {
+  background: #1455d4;
+  padding: 4rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.services h2, .services p {
+  color: #e6e6e6;
+}
+
+.services h3 {
+  font-weight: 500;
+}
+
+.services .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.services .card-container .card {
+  background: #e6e6e6;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.services .card-container .card .circle {
+  border: 5px solid #1455d4;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.services .card-container .secondary-btn {
+  line-height: 2;
+  border-bottom: 5px solid #1455d4;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 *, *::before, *::after {
@@ -240,7 +314,7 @@ body button:hover, body button:active, body button:focus {
 }
 
 body section {
-  padding: 5rem 1rem;
+  padding: 5rem 1.5rem;
 }
 
 body section, body main {
@@ -291,7 +365,7 @@ body p {
 
 body span {
   font-size: clamp(0.75rem, 1vw, 1.5rem);
-  color: #969696;
+  color: #aaaaaa;
 }
 
 @-webkit-keyframes fade {
