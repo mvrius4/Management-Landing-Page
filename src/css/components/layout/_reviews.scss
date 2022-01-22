@@ -1,0 +1,30 @@
+.reviews {
+    padding: 4rem;
+    @include flexbox(center, 0, column, 2rem);
+    .review-container {
+        @include flexbox(center, center, row, 2rem);
+        .image-container {
+            svg {
+                width: 70px;
+                height: 70px;
+                fill: $black;
+            }
+        }
+        .text-container {
+            @include flexbox(0, 0, column, 2rem);
+        }
+    }
+}
+.stats {
+    background: $blue;
+    color: $white;
+    h3 { font-size: clamp(2.75rem, 6vw, 10rem); font-weight: 700; }
+    text-align: center;
+    @include flexbox(center, center, column, 4rem);
+    .stats-container {
+        @include flexbox(center, 0, column, 1rem);
+        svg {
+            fill: $white;
+        }
+    }
+}

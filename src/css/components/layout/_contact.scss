@@ -1,0 +1,31 @@
+.contact {
+    padding: 0;
+    .content-container-left {
+        padding: 2rem;
+        @include flexbox(0, 0, column, 2rem);
+        form, .name-mail-co {
+            @include flexbox(0,0, column, 1rem);
+            input, textarea {
+                width: 90%;
+                padding: .75rem .25rem;
+                outline: none;
+                border: 1px solid $lightgray;
+                font-family: $primaryFont;
+                font-size: clamp(1rem, 1.35vw, 1.75rem);
+                &::placeholder {
+                    color: $lightgray;
+                }
+                &:hover {
+                    border: 1px solid $black;
+                }
+                &:active, &:focus, &:focus-visible {
+                    border: 3px solid $black;
+                    border-radius: 2px;
+                }
+            }
+            button {
+                align-self: flex-start;
+            }
+        }
+    }
+}

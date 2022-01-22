@@ -25,3 +25,44 @@
         } 
     }
 }
+.details {
+    padding: 4rem 2.5rem;
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-columns: auto;
+        grid-auto-rows: auto;
+        gap: 2rem;
+        @media (min-width: $size) {
+            grid-auto-rows: 1fr;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .article {
+        @include flexbox(0, 0, column, 2rem);
+        padding: 1.5rem;
+        h3 { font-size: clamp(2rem, 3vw, 5rem); font-weight: 700; }
+    }
+    .article:nth-child(1) {
+        @include flexbox(0, center, column, 3rem);
+        @media (min-width: $size) {
+            grid-row: 1 / span 2;
+        }
+        button {
+            align-self: flex-start;
+        }
+    }
+    .article:nth-child(2) {
+        @media (min-width: $size) {
+            grid-row: 1 / span 2;
+        }
+    }
+    .article:nth-child(3) {
+        background: $black;
+        color: $white;
+        @include flexbox(center, center, column, 2rem);
+    }
+    .article:nth-child(4) {
+        @include flexbox(center, center, column, 2rem);
+    }
+}
