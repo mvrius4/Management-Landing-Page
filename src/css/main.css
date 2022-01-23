@@ -58,10 +58,16 @@ header nav {
           animation: fade 250ms ease;
 }
 
+@media (min-width: 768px) {
+  header nav {
+    width: 30vw;
+  }
+}
+
 header nav svg {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 1rem;
+  right: 1rem;
   fill: #e6e6e6;
   cursor: pointer;
 }
@@ -85,6 +91,7 @@ header nav ul {
 
 header nav ul li a {
   color: #e6e6e6;
+  font-size: clamp(1.15rem, 1.65vw, 2.15rem);
 }
 
 main {
@@ -105,6 +112,22 @@ main {
   gap: 2rem;
 }
 
+@media (min-width: 768px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
+}
+
 main .content-container-left {
   width: 100%;
   padding: 1.5rem;
@@ -116,6 +139,12 @@ main .content-container-left {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  main .content-container-left {
+    width: 70%;
+  }
 }
 
 main .content-container-left .icons {
@@ -145,6 +174,19 @@ main .content-container-left .text-container {
 
 main .content-container-left .text-container p {
   color: #828282;
+}
+
+@media (min-width: 768px) {
+  main .content-container-left .text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
 }
 
 main .content-container-left .text-container .card {
@@ -211,6 +253,27 @@ main .content-container-left .text-container .card button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .services .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .services .card-container .card {
@@ -320,6 +383,10 @@ main .content-container-left .text-container .card button {
       align-self: flex-start;
 }
 
+.details .article:nth-child(2) {
+  padding: 0;
+}
+
 @media (min-width: 768px) {
   .details .article:nth-child(2) {
     -ms-grid-row: 1;
@@ -365,7 +432,7 @@ main .content-container-left .text-container .card button {
 }
 
 .reviews {
-  padding: 4rem;
+  padding: 4rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,7 +443,13 @@ main .content-container-left .text-container .card button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2rem;
+  gap: 6rem;
+}
+
+@media (min-width: 768px) {
+  .reviews {
+    width: 75%;
+  }
 }
 
 .reviews .review-container {
@@ -393,13 +466,20 @@ main .content-container-left .text-container .card button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .reviews .review-container .image-container svg {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   fill: #141414;
+}
+
+@media (min-width: 768px) {
+  .reviews .review-container .image-container svg {
+    width: 65px;
+    height: 65px;
+  }
 }
 
 .reviews .review-container .text-container {
@@ -438,6 +518,27 @@ main .content-container-left .text-container .card button {
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  .stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 4rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .stats .stats-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -457,11 +558,28 @@ main .content-container-left .text-container .card button {
 }
 
 .contact {
-  padding: 0;
+  padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
 }
 
 .contact .content-container-left {
-  padding: 2rem;
+  width: 100%;
+  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,6 +588,12 @@ main .content-container-left .text-container .card button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contact .content-container-left {
+    width: 70%;
+  }
 }
 
 .contact .content-container-left form, .contact .content-container-left .name-mail-co {
@@ -643,7 +767,6 @@ body section, body main {
 
 body svg {
   fill: #141414;
-  cursor: pointer;
 }
 
 body svg:hover, body svg:active {
@@ -660,25 +783,31 @@ body a {
 }
 
 body h1 {
-  font-size: clamp(2.75rem, 6vw, 10rem);
+  font-size: clamp(2.75rem, 4vw, 8rem);
   font-family: "Playfair Display", serif;
   font-weight: 700;
 }
 
 body h2 {
-  font-size: clamp(2.25rem, 4vw, 8rem);
+  font-size: clamp(2.25rem, 3vw, 6rem);
   font-family: "Playfair Display", serif;
   font-weight: 700;
 }
 
 body h3 {
-  font-size: clamp(1.5rem, 2.5vw, 5rem);
+  font-size: clamp(1.5rem, 2.25vw, 3.75rem);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
+body h4 {
+  font-size: clamp(2.25rem, 3.75vw, 6rem);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
 body p {
-  font-size: clamp(1.15rem, 1.65vw, 2.15rem);
+  font-size: clamp(1.15rem, 1.5vw, 2rem);
   font-weight: 400;
   line-height: 1.5;
 }
@@ -688,21 +817,46 @@ body .credits {
   color: #aaaaaa;
 }
 
+body .desktop-image {
+  display: none;
+}
+
+body .mobile-image {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  body .desktop-image {
+    display: block;
+  }
+  body .mobile-image {
+    display: none;
+  }
+}
+
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 @keyframes fade {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 /*# sourceMappingURL=main.css.map */
