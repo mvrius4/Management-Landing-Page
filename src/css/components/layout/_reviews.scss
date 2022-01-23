@@ -1,13 +1,20 @@
 .reviews {
-    padding: 4rem;
-    @include flexbox(center, 0, column, 2rem);
+    padding: 4rem 2rem;
+    @include flexbox(center, 0, column, 6rem);
+    @media (min-width: $size) {
+        width: 75%;
+    }
     .review-container {
-        @include flexbox(center, center, row, 2rem);
+        @include flexbox(center, center, row, 3rem);
         .image-container {
             svg {
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
                 fill: $black;
+                @media (min-width: $size) {
+                    width: 65px;
+                    height: 65px;   
+                }
             }
         }
         .text-container {
@@ -21,6 +28,10 @@
     h3 { font-size: clamp(2.75rem, 6vw, 10rem); font-weight: 700; }
     text-align: center;
     @include flexbox(center, center, column, 4rem);
+    @media (min-width: $size) {
+        @include flexbox(center, space-evenly, row, 4rem);
+        flex-wrap: wrap;
+    }
     .stats-container {
         @include flexbox(center, 0, column, 1rem);
         svg {
