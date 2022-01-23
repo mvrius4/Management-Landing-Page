@@ -6,6 +6,10 @@
     @include flexbox(0, 0, column, 2rem);
     .card-container {
         @include flexbox(0, 0, column, 2rem);
+        @media (min-width: $size) {
+            @include flexbox(center, space-evenly, row, 2rem);
+            flex-wrap: wrap;
+        }
         .card {
             background: $white;
             padding: 2rem;
@@ -53,6 +57,7 @@
         }
     }
     .article:nth-child(2) {
+        padding: 0;
         @media (min-width: $size) {
             grid-row: 1 / span 2;
         }
