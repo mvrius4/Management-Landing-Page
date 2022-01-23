@@ -27,10 +27,11 @@ header {
         background: rgba(15, 15, 15, 0.95);
         display: none;
         animation: fade 250ms ease;
+        @media ( min-width: $size ) { width: 30vw; }
         svg {
             position: absolute;
-            top: 2rem;
-            right: 2rem;
+            top: 1rem;
+            right: 1rem;
             fill: $white;
             cursor: pointer;
         }
@@ -38,7 +39,10 @@ header {
             height: 100vh;
             @include flexbox(center, space-evenly, column, 0);
             li {
-                a { color: $white; }
+                a {
+                    color: $white;
+                    font-size: clamp(1.15rem, 1.65vw, 2.15rem);
+                 }
             }
         }
     }
