@@ -1,16 +1,25 @@
 main {
     width: 100%;
     @include flexbox(center, center, column, 2rem);
+    @media (min-width: $size) {
+        @include flexbox(center, 0, row, 2rem);
+    }
     .content-container-left {
         width: 100%;
         padding: 1.5rem;
         @include flexbox(0, 0, column, 2rem);
+        @media (min-width: $size) {
+            width: 70%;
+        }
         .icons {
             @include flexbox(center, 0, row, 2.5rem);
         }
         .text-container {
             @include flexbox(0, 0, column, 2rem);
             p { color: $gray; }
+            @media (min-width: $size) {
+                @include flexbox(0, 0, row, 2rem);
+            }
             .card {
                 @include flexbox(0, 0, column, 2rem);
                 button { align-self: flex-start; } 
