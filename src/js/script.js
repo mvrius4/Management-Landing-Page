@@ -1,5 +1,4 @@
 import { CountUp } from 'countup.js';
-import { gsap, ScrollTrigger, Draggable, MotionPathPlugin } from 'gsap/all';
 
 const nav = document.querySelector("nav");
 const navOpener = document.querySelector("#nav-open");
