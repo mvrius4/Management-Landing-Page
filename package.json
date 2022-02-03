@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build --output public"
+    "build": "parcel build public"
   },
   "repository": {
     "type": "git",
