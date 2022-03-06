@@ -19,8 +19,5 @@
   "homepage": "https://github.com/mvrius69/Management-Landing-Page#readme",
   "devDependencies": {
     "parcel": "^2.2.1"
-  },
-  "dependencies": {
-    "countup.js": "^2.0.8"
   }
 }
