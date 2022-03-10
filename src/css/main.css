@@ -814,6 +814,7 @@ body svg:hover, body svg:active {
 
 body img {
   width: 100%;
+  height: auto;
 }
 
 body a {
