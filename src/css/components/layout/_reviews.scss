@@ -1,24 +1,25 @@
 .reviews {
     padding: 4rem 2rem;
-    @include flexbox(center, 0, column, 6rem);
+    @include flexbox(center, 0, column, 4rem);
     @media (min-width: $size) {
-        width: 75%;
+        width: 65%;
     }
     .review-container {
-        @include flexbox(center, center, row, 3rem);
+        @include flexbox(center, center, row, 2rem);
         .image-container {
-            svg {
-                width: 50px;
-                height: 50px;
-                fill: $black;
-                @media (min-width: $size) {
-                    width: 65px;
-                    height: 65px;   
-                }
+            img {
+                min-width: 50px;
+                max-width: 75px;
+                border-radius: 50%;
+                border: .3rem solid $blue;
             }
         }
         .text-container {
-            @include flexbox(0, 0, column, 2rem);
+            @include flexbox(0, 0, column, 1rem);
+            span {
+                color: $blue;
+                font-weight: 900;
+            }
         }
     }
 }
