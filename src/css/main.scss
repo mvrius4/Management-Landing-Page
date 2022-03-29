@@ -27,21 +27,22 @@ body {
     height: 100%;
     @include flexbox(center, center, column, 0);
     button {
-        background: $blue;
+        background-color: $blue;
         color: $white;
         cursor: pointer;
         font-size: clamp(1rem, 1.3vw, 1.6rem);
         font-weight: 700;
         padding: .85rem 1.5rem;
         &:hover, &:active, &:focus {
-            background: $blueActive
+            transition: background-color .5s ease-in;
+            background-color: $blueActive
         }
     }
     section { padding: 5rem 1.5rem; }
     section, main { width: 100%; }
     svg {
         fill: $black;
-        &:hover, &:active { fill: $blue; }
+        &:hover, &:active { transition: fill .5s ease-in; fill: $blue; }
     }
     img { width: 100%; height: auto; }
     a {
@@ -52,11 +53,12 @@ body {
     h2 { font-size: clamp(2.25rem, 3vw, 6rem); font-family: $secondaryFont; font-weight: 700; }
     h3 { font-size: clamp(1.5rem, 2.25vw, 3.75rem); font-family: $primaryFont; font-weight: 400; }
     h4 { font-size: clamp(2.25rem, 3.75vw, 6rem); font-family: $primaryFont; font-weight: 700; }
-    p {
+    p, label {
         font-size: clamp(1.15rem, 1.5vw, 2rem);
         font-weight: 400;
         line-height: 1.5;
     }
+    label { color: $black; }
     .credits { font-size: clamp(.75rem, 1vw, 1.5rem); color: $lightgray; }
     .desktop-image { display: none; }
     .mobile-image { display: block; }

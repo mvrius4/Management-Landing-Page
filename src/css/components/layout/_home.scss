@@ -17,7 +17,7 @@ main {
         .text-container {
             @include flexbox(0, 0, column, 2rem);
             p { color: $gray; }
-            @media (min-width: $size) {
+            @media (min-width: 1200px) {
                 @include flexbox(0, 0, row, 2rem);
             }
             .card {

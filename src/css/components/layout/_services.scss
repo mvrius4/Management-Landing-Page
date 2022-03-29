@@ -20,6 +20,7 @@
                 width: 75px;
                 height: 75px;
                 @include flexbox(center, center, column, 2rem);
+                .circle__text { font-size: clamp(1.5rem, 2.25vw, 3.75rem); font-family: $primaryFont; font-weight: 700; }
             }
         }
         .secondary-btn {

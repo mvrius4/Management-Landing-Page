@@ -10,8 +10,11 @@
         @media (min-width: $size) {
             width: 70%;
         }
-        form, .name-mail-co {
+        form {
             @include flexbox(0,0, column, 1rem);
+            div {
+                @include flexbox(0, 0, column, 0);
+            }
             input, textarea {
                 width: 90%;
                 padding: .75rem .25rem;
