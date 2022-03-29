@@ -79,11 +79,11 @@
     </main>
     <section id="info" class="info reveal" itemprop="description">
         <h2>Quality Consulting</h2>
-        <h3>
+        <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Omnis ratione velit earum beatae officiis impedit eum eaque rerum a quibusdam sed culpa, 
             sint, repellendus cum ad repudiandae nobis labore, tempore ipsam placeat ab fugit?
-        </h3>
+        </p>
         <button>READ MORE</button>
     </section>
     <section id="services" class="services reveal" itemscope itemtype="https://schema.org/Organization">
@@ -96,28 +96,28 @@
         <div class="card-container">
             <div class="card">
                 <div class="circle">
-                    <h3>01</h3>
+                    <span class="circle__text">01</span>
                 </div>
                 <h3>Call Service</h3>
                 <a href="#services" class="secondary-btn">LEARN MORE</a>
             </div>
             <div class="card">
                 <div class="circle">
-                    <h3>02</h3>
+                    <span class="circle__text">02</span>
                 </div>
                 <h3>Your Strategy</h3>
                 <a href="#services" class="secondary-btn">LEARN MORE</a>
             </div>
             <div class="card">
                 <div class="circle">
-                    <h3>03</h3>
+                    <span class="circle__text">03</span>
                 </div>
                 <h3>Team Building</h3>
                 <a href="#services" class="secondary-btn">LEARN MORE</a>
             </div>
             <div class="card">
                 <div class="circle">
-                    <h3>04</h3>
+                    <span class="circle__text">04</span>
                 </div>
                 <h3>Premium Plan</h3>
                 <a href="#services" class="secondary-btn">LEARN MORE</a>
@@ -201,12 +201,22 @@
             <h2>Doing The Right Thing, At The Right Time</h2>
             <span class="credits">Photo by Jiarong Deng from Pexels</span>
             <form action="contact">
-                <div class="name-mail-co">
-                    <input type="text" name="name" placeholder="Enter your name">
-                    <input type="text" name="email" placeholder="Enter a valid email adress">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Ex.: Marius" required>
                 </div>
-                <input type="text" name="adress" placeholder="Enter your adress">
-                <textarea name="message" cols="20" rows="5" placeholder="Enter a message"></textarea>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Ex.: example@email.com" required>
+                </div>
+                <div>
+                    <label for="adress">Adress(optional)</label>
+                    <input type="text" id="adress" placeholder="Jud., Loc., Sat, Nr.">
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" cols="10" rows="3" placeholder="Write us a message"></textarea>
+                </div>
                 <button>SUBMIT</button>
             </form>
         </div>
